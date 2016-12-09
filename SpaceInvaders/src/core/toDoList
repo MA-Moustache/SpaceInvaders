@@ -1,0 +1,66 @@
+		
+
+// TO DO //
+	
+	* Laissez la possibilité a l'utilisateur de choisir la taille du tableau
+	* (à la fin) Optimiser le code, variable inutiles, import inutiles, etc..
+	
+// IN PROGRESS //
+
+
+	
+// DONE //
+
+	* Base du code
+	* Détruire les tirs lorsqu'ils atteignent les limites de la carte
+	* Les Tirs ennemis doivent être capable d'avancer tout seul a des intervales synchronisées et par vague
+	* Création de classe et methodes principales ainsi que de super classes.
+	* Les vaisseau ennemis peuvent tirer en ayant 1 chance sur 5 de chance.
+	* Le tableau se génère avec les VaisseauEnnemis et le VaisseauAllie et est capable d'afficher des Tirs, donc tout les Sprite en général
+	* utiliser les touche ZQSD (+enter) pour effectuer des mouvements
+		** Le vaisseau ne peut pas aller en dehors des limites de la carte
+	* Lorsque tout les vaisseau ennemis sont détruit, la partie se fini sur une victoire
+	* Lorsque le vaisseau allié est détruit, la partie se fini sur une défaite
+	* Les Tirs alliés doivent être capable d'avancer tout seul a des intervales synchronisées et par vague
+	
+	* Lorsqu'un tir ennemi atteins un tir alliés, ces derniers doivent se détruire		\
+	* Lorsqu'un tir allié atteins un VaisseauEnnemi, ces derniers doivent se détruire	 | => Les tirs doivent se détruire après collision, les vaisseau doivent se détruire après collision
+	
+	
+// NOTES //
+
+1.
+	Tableau.getJeu() => Object[][]
+	donc
+	Tableau.jeu doit se modifier après un evenement
+
+	Tableau.jeu = nouveau Object[][] crée par un évenement
+	|
+	---> setJeu(Object[][] update)
+			this.jeu = update;
+	
+2.
+	Les tirs doivent avancer synchronisé toutes les 2 secondes
+	Les vaisseaux ennemis et aliés doivent tirer toutes les 5 secondes
+	-> non en faite les tir alliés sont plus fréquent
+	
+
+3.
+			|
+			v QUE TIR ALLIÉS
+	_____________________	
+	|					|	
+	|					|
+	|					|
+	|					|
+	|___________________| 
+			
+			^
+			| QUE TIR ENNEMIS
+
+
+
+
+
+
+
